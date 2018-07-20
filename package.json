@@ -1,0 +1,14 @@
+{
+  "name": "@amerani/toolkit",
+  "version": "0.1.1",
+  "description": "npm install binary of cli utils",
+  "main": "index.js",
+  "author": "Alek Merani",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^2.4.1"
+  },
+  "bin": {
+    "am-toolkit": "./index.js"
+  }
+}
