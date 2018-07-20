@@ -2,6 +2,10 @@
 const { exec } =  require('child_process');
 const chalk = require('chalk');
 
+console.log(chalk.bgCyan('running amtk...\n\n'));
+
+console.log(chalk.bgCyan('installing global npm pakcages...'))
+
 let command = 'npm install -g yarn';
 command = ["webpack", "typescript", "webpack-command", "ts-node", "@babel/core", "@babel/cli"]
 .reduce((acc, cur) => acc.concat(` && yarn global add ${cur}`), command);
