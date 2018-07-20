@@ -1,5 +1,5 @@
 {
-  "name": "@amerani/toolkit",
+  "name": "amtk",
   "version": "0.1.3",
   "description": "npm install binary of cli utils",
   "main": "index.js",
