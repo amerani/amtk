@@ -1,6 +1,6 @@
 {
   "name": "@amerani/toolkit",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "npm install binary of cli utils",
   "main": "index.js",
   "author": "Alek Merani",
