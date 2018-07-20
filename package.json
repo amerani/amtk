@@ -9,6 +9,16 @@
     "chalk": "^2.4.1"
   },
   "bin": {
-    "am-toolkit": "./index.js"
-  }
+    "amtk": "./index.js"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amerani/toolkit.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/amerani/toolkit/issues"
+  },
+  "homepage": "https://github.com/amerani/toolkit#readme"
 }
