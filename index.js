@@ -2,12 +2,12 @@
 const { exec } =  require('child_process');
 const chalk = require('chalk');
 
-console.log(chalk.bgCyan('running amtk...\n\n'));
+console.log(chalk.white('npx amtk\n'));
 
-console.log(chalk.bgCyan('installing global npm pakcages...'))
+console.log(chalk.bgCyan('installing global npm pakcages...\n'))
 
 let command = 'npm install -g yarn';
-command = ["webpack", "typescript", "webpack-command", "ts-node", "@babel/core", "@babel/cli"]
+command = ["typescript", "ts-node", "@babel/core", "@babel/cli", "webpack", "webpack-command", "eslint", "tslint"]
 .reduce((acc, cur) => acc.concat(` && yarn global add ${cur}`), command);
 
 let text = ''
@@ -15,11 +15,25 @@ const set = new Set();
 const npmi = exec(command);
 npmi.stdout.on('data', data => {
       text = text + data;
+
+      const y = text.match(/\+ yarn@.*[\r\n]*.*\ds/gi);
+      y && y.forEach(s => {
+            if(s.trim() != '') {
+                  if(!set.has(s)) {
+                        set.add(s);
+                        console.log(chalk.blue(s) + '\n');
+                  }
+            }
+      })
+
       const suc = text.match(/(success Installed\s.*[\r\n]*.*[[\r\n]*.*[\r\n]*.*[\r\n]*.*\ds.)/gi)
       suc && suc.forEach(s => {
-            if(!set.has(s)){
-                  set.add(s);
-                  console.log(chalk.blue(s));
+            // s = s.split(' ').map(x => x.trim()).join(' ');
+            if(s.trim() != '') {
+                  if(!set.has(s)){
+                        set.add(s);
+                        console.log(chalk.blue(s) + '\n');
+                  }
             }
       })
 });
@@ -28,11 +42,13 @@ npmi.stderr.on('data', data => {
       while(data.search(r) >= 0) {
             data = data.replace(r, '')
       }
-      console.log(data);
+      if(data.trim() != '') {
+            console.log(data);
+      }
 });
 npmi.on('close', code => {
       if(code === 0) {
-            console.log(chalk.green(`\ninstalled global npm packages successfully`))
+            console.log(chalk.green(`\nsuccessfully installed global npm packages`))
       } else {
             console.log(chalk.red(`\nerror installing global npm packages`))
       }
