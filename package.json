@@ -1,6 +1,6 @@
 {
   "name": "amtk",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "npm install binary of cli utils",
   "main": "index.js",
   "author": "Alek Merani",
