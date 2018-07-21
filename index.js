@@ -2,9 +2,9 @@
 const { exec } =  require('child_process');
 const chalk = require('chalk');
 
-console.log(chalk.white('npx amtk\n'));
+console.log(chalk.bgWhite('--- npx amtk ---\n'));
 
-console.log(chalk.bgCyan('installing global npm pakcages...\n'))
+console.log(chalk.bgCyan('installing global npm packages...\n'))
 
 let command = 'npm install -g yarn';
 command = ["typescript", "ts-node", "@babel/core", "@babel/cli", "webpack", "webpack-command", "eslint", "tslint"]
@@ -28,7 +28,6 @@ npmi.stdout.on('data', data => {
 
       const suc = text.match(/(success Installed\s.*[\r\n]*.*[[\r\n]*.*[\r\n]*.*[\r\n]*.*\ds.)/gi)
       suc && suc.forEach(s => {
-            // s = s.split(' ').map(x => x.trim()).join(' ');
             if(s.trim() != '') {
                   if(!set.has(s)){
                         set.add(s);
@@ -43,7 +42,7 @@ npmi.stderr.on('data', data => {
             data = data.replace(r, '')
       }
       if(data.trim() != '') {
-            console.log(data);
+            console.log(chalk.red(data));
       }
 });
 npmi.on('close', code => {
