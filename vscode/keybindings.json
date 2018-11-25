@@ -1,0 +1,83 @@
+[
+	{
+		"key": "ctrl+b",
+		"command": "editor.action.goToDeclaration",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "alt+f7",
+		"command": "editor.action.referenceSearch.trigger",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "ctrl+shift+alt+n",
+		"command": "workbench.action.showAllSymbols"
+	},
+	{
+		"key": "ctrl+n",
+		"command": "workbench.action.quickOpen"
+	},
+	{
+		"key": "ctrl+shift+n",
+		"command": "workbench.action.quickOpen"
+	},
+	{
+		"key": "ctrl+f12",
+		"command": "workbench.action.gotoSymbol"
+	},
+	{
+		"key": "alt+enter",
+		"command": "editor.action.quickFix",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "ctrl+t r",
+		"command": "dotnet.test.run"
+	},
+	{
+		"key": "ctrl+t l",
+		"command": "workbench.action.tasks.test"
+	},
+	{
+		"key": "ctrl+p",
+		"command": "editor.action.triggerParameterHints"
+	},
+	{
+		"key": "ctrl+h",
+		"command": "editor.action.startFindReplaceAction"
+	},
+	{
+		"key": "alt+ctrl+f",
+		"command": "-editor.action.startFindReplaceAction"
+	},
+	{
+		"key": "alt+a",
+		"command": "editor.action.replaceAll",
+		"when": "editorFocus && findWidgetVisible"
+	},
+	{
+		"key": "alt+ctrl+enter",
+		"command": "-editor.action.replaceAll",
+		"when": "editorFocus && findWidgetVisible"
+	},
+	{
+		"key": "ctrl+shift+alt+b",
+		"command": "editor.action.goToImplementation"
+	},
+	{
+		"key": "ctrl+-",
+		"command": "workbench.action.navigateBack"
+	},
+	{
+		"key": "ctrl+shift+-",
+		"command": "workbench.action.navigateForward"
+	},
+	{
+		"key": "ctrl+m o",
+		"command": "editor.foldAll"
+	},
+	{
+		"key": "ctrl+m l",
+		"command": "editor.unfoldAll"
+	}
+]

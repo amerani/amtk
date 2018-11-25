@@ -1,0 +1,12 @@
+{
+    "explorer.confirmDragAndDrop": false,
+    "editor.wordWrap": "on",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "window.zoomLevel": 1,
+    "workbench.colorTheme": "Tomorrow Night Eighties",
+    "terminal.external.osxExec": "iTerm.app",
+    "editor.tabSize": 2,
+    "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+    "javascript.format.insertSpaceAfterConstructor": true,
+    "editor.fontSize": 14
+}
